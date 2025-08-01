@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BDD Selenium Framework Test Suite" parallel="methods" thread-count="1">
+    
+    <test name="Smoke Tests">
+        <classes>
+            <class name="com.example.framework.runners.TestRunner">
+                <methods>
+                    <include name="runScenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Regression Tests">
+        <classes>
+            <class name="com.example.framework.runners.TestRunner">
+                <methods>
+                    <include name="runScenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="com.example.framework.runners.TestRunner">
+                <methods>
+                    <include name="runScenario"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    
+    <!-- Test Listeners -->
+    <listeners>
+        <listener class-name="com.example.framework.listeners.TestListener"/>
+        <listener class-name="com.example.framework.listeners.AllureListener"/>
+    </listeners>
+    
+    <!-- Parameters -->
+    <parameter name="browser" value="chrome"/>
+    <parameter name="headless" value="false"/>
+    <parameter name="implicit.wait" value="10"/>
+    <parameter name="explicit.wait" value="10"/>
+    
+</suite> 
